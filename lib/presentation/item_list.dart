@@ -77,7 +77,9 @@ class ItemListScreen extends StatelessWidget {
                           Row(
                             children: [
                               Text(itemsToDisplay[index].name,
-                                  style: const TextStyle(fontSize: 16,color: AppColors.textColorWhite)),
+                                  style: const TextStyle(
+                                      fontSize: 16,
+                                      color: AppColors.textColorWhite)),
                               const SizedBox(
                                 width: 15,
                               ),
@@ -85,15 +87,14 @@ class ItemListScreen extends StatelessWidget {
                                 MyIcons.veg,
                                 color: itemsToDisplay[index].color,
                                 size: 20,
-                               
                               ),
                             ],
                           ),
                           Text(
                             "\u{20B9} ${itemsToDisplay[index].price}",
-                            style: const TextStyle(fontSize: 18,color: AppColors.textColorWhite),
+                            style: const TextStyle(
+                                fontSize: 18, color: AppColors.textColorWhite),
                             textAlign: TextAlign.center,
-                            
                           )
                         ],
                       ),
