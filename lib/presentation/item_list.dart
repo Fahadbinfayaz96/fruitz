@@ -61,12 +61,12 @@ class ItemListScreen extends StatelessWidget {
                 return Container(
                   height: 100,
                   margin: const EdgeInsets.all(10),
-                  padding: const EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                      color: AppColors.textColorWhite,
+                      color: AppColors.bColor,
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: const [
-                        BoxShadow(color: AppColors.textColorWhite, blurRadius: 1)
+                        BoxShadow(color: AppColors.redColor, blurRadius: 1)
                       ]),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +77,7 @@ class ItemListScreen extends StatelessWidget {
                           Row(
                             children: [
                               Text(itemsToDisplay[index].name,
-                                  style: const TextStyle(fontSize: 16)),
+                                  style: const TextStyle(fontSize: 16,color: AppColors.textColorWhite)),
                               const SizedBox(
                                 width: 15,
                               ),
@@ -85,14 +85,15 @@ class ItemListScreen extends StatelessWidget {
                                 MyIcons.veg,
                                 color: itemsToDisplay[index].color,
                                 size: 20,
-                                // textDirection: TextDirection.rt,
+                               
                               ),
                             ],
                           ),
                           Text(
                             "\u{20B9} ${itemsToDisplay[index].price}",
-                            style: const TextStyle(fontSize: 18),
+                            style: const TextStyle(fontSize: 18,color: AppColors.textColorWhite),
                             textAlign: TextAlign.center,
+                            
                           )
                         ],
                       ),

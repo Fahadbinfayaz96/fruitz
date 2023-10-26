@@ -6,7 +6,7 @@ class AppColors {
   static const Color textColorWhite = Color(0xFFf9f9f9);
   static const Color dividerColor = Color.fromARGB(255, 154, 154, 154);
   static const Color elevationColor = Color.fromARGB(255, 8, 8, 8);
-  static const Color textColorBlack = Colors.black;
+  static const Color bColor = Colors.black;
   static const Color redColor = Color.fromARGB(255, 255, 0, 0);
-  static const Color bColor = Color.fromARGB(255, 37, 35, 35);
+  //static const Color bColor = Color.fromARGB(255, 37, 35, 35);
 }
