@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
-import '../utils/colors.dart';
+import '../constants/colors.dart';
 import '../utils/my_icons.dart';
 
 class ItemListScreen extends StatelessWidget {
@@ -45,9 +45,9 @@ class ItemListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final itemsToDisplay = getItemsToDisplay();
     return Scaffold(
-      backgroundColor: AppColors.bColor,
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
-        backgroundColor: AppColors.bColor,
+        backgroundColor: AppColors.backgroundColor,
         title: Text(heading[index].toString()),
         centerTitle: true,
       ),
@@ -63,10 +63,10 @@ class ItemListScreen extends StatelessWidget {
                   margin: const EdgeInsets.all(10),
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                      color: AppColors.bColor,
+                      color: AppColors.backgroundColor,
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: const [
-                        BoxShadow(color: AppColors.redColor, blurRadius: 1)
+                        BoxShadow(color: AppColors.primaryColor, blurRadius: 1)
                       ]),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,7 +77,9 @@ class ItemListScreen extends StatelessWidget {
                           Row(
                             children: [
                               Text(itemsToDisplay[index].name,
-                                  style: const TextStyle(fontSize: 16,color: AppColors.textColorWhite)),
+                                  style: const TextStyle(
+                                      fontSize: 16,
+                                      color: AppColors.textColorWhite)),
                               const SizedBox(
                                 width: 15,
                               ),
@@ -85,15 +87,14 @@ class ItemListScreen extends StatelessWidget {
                                 MyIcons.veg,
                                 color: itemsToDisplay[index].color,
                                 size: 20,
-                               
                               ),
                             ],
                           ),
                           Text(
                             "\u{20B9} ${itemsToDisplay[index].price}",
-                            style: const TextStyle(fontSize: 18,color: AppColors.textColorWhite),
+                            style: const TextStyle(
+                                fontSize: 18, color: AppColors.textColorWhite),
                             textAlign: TextAlign.center,
-                            
                           )
                         ],
                       ),
@@ -115,7 +116,7 @@ class ItemListScreen extends StatelessWidget {
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
-                  color: AppColors.redColor),
+                  color: AppColors.primaryColor),
               textAlign: TextAlign.center,
             ),
           ),

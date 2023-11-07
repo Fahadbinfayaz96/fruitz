@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruitz/utils/screen_sizes.dart';
-import '../utils/colors.dart';
+import '../constants/colors.dart';
 import 'item_list.dart';
 
 class CategoriesScreen extends StatelessWidget {
@@ -13,12 +13,12 @@ class CategoriesScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Furtiz"),
           centerTitle: true,
-          backgroundColor: AppColors.bColor,
+          backgroundColor: AppColors.backgroundColor,
           elevation: 0,
           automaticallyImplyLeading: true,
           foregroundColor: AppColors.textColorWhite,
         ),
-        backgroundColor: AppColors.bColor,
+        backgroundColor: AppColors.backgroundColor,
         body: Column(
           children: [
             Transform.translate(
@@ -27,7 +27,7 @@ class CategoriesScreen extends StatelessWidget {
                 "assets/images/logo.png",
                 fit: BoxFit.fill,
                 width: double.infinity,
-                height:ScreenSizes.isMeduimScreen(context)?300 :260,
+                height: ScreenSizes.isMeduimScreen(context) ? 300 : 260,
               ),
             ),
             const SizedBox(
@@ -35,7 +35,6 @@ class CategoriesScreen extends StatelessWidget {
             ),
             Expanded(
               child: ListView.builder(
-               
                 itemCount: yourDataList.length,
                 itemBuilder: (context, index) {
                   return InkWell(
@@ -75,7 +74,9 @@ class CategoriesScreen extends StatelessWidget {
                               child: Image.asset(
                                 yourDataList[index].imageUrl,
                                 height: 160,
-                                width:ScreenSizes.isSmallScreen(context)? 400:700,
+                                width: ScreenSizes.isSmallScreen(context)
+                                    ? 400
+                                    : 700,
                                 fit: BoxFit.fitWidth,
                               ),
                             ),
@@ -85,8 +86,10 @@ class CategoriesScreen extends StatelessWidget {
                             top: 10,
                             child: Text(
                               yourDataList[index].text,
-                              style:  TextStyle(
-                                fontSize:ScreenSizes.isMeduimScreen(context)?19: 17,
+                              style: TextStyle(
+                                fontSize: ScreenSizes.isMeduimScreen(context)
+                                    ? 19
+                                    : 17,
                                 color: AppColors.textColorWhite,
                               ),
                               textAlign: TextAlign.center,
