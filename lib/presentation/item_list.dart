@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
@@ -57,7 +55,6 @@ class ItemListScreen extends StatelessWidget {
             child: ListView.builder(
               itemCount: itemsToDisplay.length,
               itemBuilder: (context, index) {
-                log("item length ${itemsToDisplay.length}");
                 return Container(
                   height: 100,
                   margin: const EdgeInsets.all(10),

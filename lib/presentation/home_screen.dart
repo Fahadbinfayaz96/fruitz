@@ -68,10 +68,10 @@ class ItemBlock extends StatelessWidget {
       },
       child: Container(
         width: double.infinity,
-        margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+        margin: const EdgeInsets.symmetric(vertical: 10),
         decoration: BoxDecoration(
             color: AppColors.backgroundColor,
-            borderRadius: BorderRadius.circular(15),
+            borderRadius: BorderRadius.circular(10),
             boxShadow: const [
               BoxShadow(
                   spreadRadius: 0, blurRadius: 1, color: AppColors.primaryColor)
@@ -128,17 +128,17 @@ class YourData {
 List<YourData> yourDataList = [
   YourData(
     text: "Salads",
-    imageUrl: "assets/images/menu/fruit_salad.jpg",
+    imageUrl: "assets/images/menu/fruit_salad.png",
     id: 1,
   ),
   YourData(
     text: "Mocktails",
-    imageUrl: "assets/images/menu/mocktails.jpg",
+    imageUrl: "assets/images/menu/mocktails.png",
     id: 2,
   ),
   YourData(
     text: "Baskets",
-    imageUrl: "assets/images/menu/fruit_basket.jpg",
+    imageUrl: "assets/images/menu/fruit_basket.png",
     id: 3,
   ),
 ];

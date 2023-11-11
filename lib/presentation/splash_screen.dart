@@ -17,23 +17,6 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-
-    getJwtToken();
-  }
-
-  void getJwtToken() async {
-    Duration delay = const Duration(seconds: 2);
-    await Future.delayed(
-      delay,
-      () {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomeScreen(),
-          ),
-        );
-      },
-    );
   }
 
   @override
@@ -43,9 +26,10 @@ class _SplashScreenState extends State<SplashScreen> {
       splashIconSize: 300,
       animationDuration: const Duration(seconds: 2),
       nextScreen: const HomeScreen(),
+      duration: 2000,
       backgroundColor: AppColors.backgroundColor,
       splashTransition: SplashTransition.fadeTransition,
-      pageTransitionType: PageTransitionType.scale,
+      pageTransitionType: PageTransitionType.rightToLeft,
     );
     ;
   }
