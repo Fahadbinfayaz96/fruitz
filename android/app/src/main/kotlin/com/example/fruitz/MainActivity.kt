@@ -1,4 +1,4 @@
-package com.example.fruitz
+package com.wallayl.fruitz
 
 import io.flutter.embedding.android.FlutterActivity
 
